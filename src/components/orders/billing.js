@@ -157,7 +157,7 @@ const ContactInfo = () => {
       margin="normal"
       type="number"
       required
-      onInput={(e) => e.target.value = e.target.value.slice(0, 10)}
+      onInput={(e) => { e.target.value = e.target.value.slice(0, 10);  } }
       {...field}
     />
           
@@ -239,6 +239,12 @@ const LinaerStepper = () => {
   };
 
   const handleNext = (data) => {
+    if(data.phoneNo < 0 ||  data.phoneNo?.length < 10)
+    {
+      alert("Please enter correct contact number");
+      return false;
+    }
+
       if(activeStep === steps.length - 1){
         setActiveStep(activeStep + 1);
         dispatcher(captureUserDetails(data));

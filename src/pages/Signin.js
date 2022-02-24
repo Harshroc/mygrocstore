@@ -18,6 +18,7 @@ import Navbar from '../components/navbar/Navbar';
 import Footer from '../components/footer/Footer';
 import { useDispatch, useSelector } from 'react-redux';
 import { signin } from '../redux-modules/users/userAction'
+import { toast } from 'react-toastify';
 
 
 const useStyles = makeStyles(() => ({
@@ -34,6 +35,8 @@ const Signin = () => {
     const [password, setpassword] = useState('')
     const userInfoState = useSelector((state) => state.userInfo);
     const { loading, userInfo, error} = userInfoState;
+    toast.configure();
+    const notifyError = (text) => toast.error( text, {autoClose: 2000,position: "top-center"});
 
     useEffect(() => {
       if(userInfo){
@@ -42,8 +45,20 @@ const Signin = () => {
     }, [userInfo]);// eslint-disable-line react-hooks/exhaustive-deps
 
     const handleSubmit = (event) => {
+      
         event.preventDefault();
-        
+        const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if(!email.match(reg))
+        {
+          notifyError("Please enter email");
+          return false;
+        }
+
+        if(password === "")
+        {
+          notifyError("Please enter password");
+          return false;
+        }
         dispatcher(signin(email, password))
     }
 

@@ -17,6 +17,10 @@ import { makeStyles } from '@mui/styles';
 import Navbar from '../components/navbar/Navbar';
 import Footer from '../components/footer/Footer';
 import { API_URL } from "../utils/public";
+import { toast } from 'react-toastify';
+
+
+
 const useStyles = makeStyles(() => ({
   homecontainer : {
       padding: '0 10px'
@@ -24,6 +28,10 @@ const useStyles = makeStyles(() => ({
 }));
 const theme = createTheme();
 function Signup() {
+
+  toast.configure();
+  const notifyError = (text) => toast.error( text, {autoClose: 2000,position: "top-center"});
+
     const classes = useStyles();
     const navigate = useNavigate();
     const handleSubmit = (event) => {
@@ -32,6 +40,33 @@ function Signup() {
         // eslint-disable-next-line no-console
         
         const formData = new URLSearchParams();
+
+        const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        const mobreg = /^\d{10}$/;
+        
+
+        if(!data.get('email').match(reg))
+        {
+          notifyError("Please enter email");
+          return false;
+        }
+        else if(data.get('mobile') === "")
+        {
+          notifyError("Please enter mobile");
+          return false;
+        }
+        else if(!data.get('mobile').match(mobreg))
+        {
+          notifyError("Invalid Mobile Number");
+          return false;
+        }
+        else if(data.get('password') === "")
+        {
+          notifyError("Please enter password");
+          return false;
+        }
+
+
         formData.append('userEmail', data.get('email'));
         formData.append('userMobile', data.get('mobile'));
         formData.append('userPassword', data.get('password'));
