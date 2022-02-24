@@ -47,7 +47,7 @@ const Signin = () => {
     const handleSubmit = (event) => {
       
         event.preventDefault();
-        const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        const reg = /^\w+([\\.-]?\w+)*@\w+([\\.-]?\w+)*(\.\w{2,3})+$/;
         if(!email.match(reg))
         {
           notifyError("Please enter email");

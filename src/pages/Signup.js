@@ -41,7 +41,7 @@ function Signup() {
         
         const formData = new URLSearchParams();
 
-        const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        const reg = /^\w+([\\.-]?\w+)*@\w+([\\.-]?\w+)*(\.\w{2,3})+$/;
         const mobreg = /^\d{10}$/;
         
 
