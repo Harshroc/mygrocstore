@@ -26,14 +26,11 @@ function MyOrders() {
 
   const userid = useSelector((state) =>  state.userInfo.userInfo ? state.userInfo.userInfo.userid : null);
 
-  
-
-
   useEffect(() => {
     
     dispatcher(getorders(userid, token));
     
-  }, [])
+  }, [] ) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     

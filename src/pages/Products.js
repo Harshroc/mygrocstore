@@ -66,27 +66,7 @@ useEffect(() => {
     
     dispatcher(filterProductByCategory(products, pagecategory));
     }
-}, [products]);
-
-// useEffect(() => {
-//   return () => {
-//     if(typeof shopbycategory !== "undefined")
-//     {
-//       const a = shopbycategory[0].toUpperCase() + shopbycategory.slice(1);
-//       const pagecategory = [a];
-//     // Update the document title using the browser API
-//     dispatcher(filterProductByCategory(products, pagecategory));
-//     }
-//   }
-// }, [])
-
-
-
-
-
-
-
-
+}, [products]);// eslint-disable-line react-hooks/exhaustive-deps
 
 
   return (

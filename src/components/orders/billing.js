@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import { makeStyles } from '@mui/styles';
 import { useForm, FormProvider, useFormContext, Controller } from 'react-hook-form';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { captureUserDetails } from '../../redux-modules/billing/userBillingAction';
 
 
@@ -216,15 +216,16 @@ const LinaerStepper = () => {
   const [activeStep, setActiveStep] = useState(0);
   const steps = getSteps();
   const dispatcher = useDispatch();
+  const userDetails = useSelector((state) => state.billing?.userdetails);
 
   const methods = useForm({
       defaultValues: {
-        addressType: "",
-        address: "",
-        addressCity: "",
-        addressPincode: "",
-        deliveryTime: "",
-        phoneNo:"",
+        addressType: userDetails?.addressType,
+        address: userDetails?.address,
+        addressCity:userDetails?.addressCity,
+        addressPincode: userDetails?.addressPincode,
+        deliveryTime: userDetails?.deliveryTime,
+        phoneNo:userDetails?.phoneNo,
         payment:"Cash On Delivery",
       }
   });
@@ -251,9 +252,7 @@ const LinaerStepper = () => {
     setActiveStep(activeStep - 1);
   };
 
-//   const onSubmit = (data) => {
-//       console.log(data);
-//   }
+
 
   return (
     <div className={classes.stepperWrapper}>

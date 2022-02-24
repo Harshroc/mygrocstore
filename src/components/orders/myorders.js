@@ -1,29 +1,11 @@
 import { useSelector } from 'react-redux';
 import { Grid } from '@mui/material';
-import { makeStyles } from '@mui/styles';
-
-
-
-const useStyles = makeStyles(() => ({
-    fulldatatable: {
-        width: "100%",
-        
-    },
-}));
-
- 
-
 
 const Myorders = () => { 
-
-    
-
-    
     
     const myorderdata = useSelector((state) =>  state.order ? state.order.myorders : null);
     const myordererror = useSelector((state) =>  state.order ? state.order.error : null);
     const token = useSelector((state) =>  state.userInfo.userInfo ? state.userInfo.userInfo.token : null);
-    const categories = useSelector(state => state.categories.items);
    
 
       if(myordererror)

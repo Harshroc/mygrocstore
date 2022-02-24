@@ -1,4 +1,4 @@
-import { CREATE_ORDER, CLEAR_ORDER, ERROR_ORDER, GET_ORDER } from "./ordersTypes";
+import { CREATE_ORDER, CLEAR_ORDER, GET_ORDER } from "./ordersTypes";
 import { API_URL } from "../../utils/public";
 
 export const createOrder = (order,userdetails,token, userid) => (dispatch) => {

@@ -3,14 +3,9 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import { API_URL } from "../utils/public";
 import { useState, useEffect } from "react";
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import {
-    Link
-} from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useParams } from "react-router-dom";
 import { makeStyles } from '@mui/styles';
-import ReactImageZoom from 'react-image-zoom';
 import Navbar from '../components/navbar/Navbar';
 import Footer from '../components/footer/Footer';
 import { addToCart} from '../redux-modules/shopping/shoppingActions';
@@ -19,7 +14,7 @@ const useStyles = makeStyles(() => ({
       padding: '0 10px'
   },
 })); 
-const theme = createTheme();
+
 
 function Productid() {
     const classes = useStyles();
@@ -48,13 +43,13 @@ function Productid() {
           )
       },);
 
-      let img = product.productImage;
+      
       let productDesc = '';
       if(product){
         
-        const props = { zoomWidth: 500, img: product.productImage};
+        
 
-        img = product.productImage;
+        
         productDesc = <div style={{textAlign:'center'}}>
           <br/><br/>
           <h1>{product.productName}</h1>
