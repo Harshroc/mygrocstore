@@ -1,0 +1,12 @@
+{
+    "users": [
+        {
+            "_id": "user1",
+            "email": "Grocery 1",
+            "mobileNo":"about grocery 1",
+            "password": "123456",
+            "createdOn":"2021"
+        }
+        
+    ]
+}

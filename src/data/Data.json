@@ -1,0 +1,95 @@
+{
+    "products": [
+        {
+            "_id": "grocery1",
+            "title": "Grocery 1",
+            "description":"about grocery 1",
+            "price": 19,
+            "category":"bestSeller",
+            "image":"https://5.imimg.com/data5/QB/DG/MY-24753572/packed-basmati-rice-500x500.jpg",
+            "size":"500g"   
+        },
+        {
+            "_id": "grocery2",
+            "title": "Grocery 2",
+            "description":"about grocery 2",
+            "price": 15,
+            "category":"bestSeller",
+            "image":"https://5.imimg.com/data5/QB/DG/MY-24753572/packed-basmati-rice-500x500.jpg",
+            "size":"250g"   
+        },
+        {
+            "_id": "grocery3",
+            "title": "Grocery 3",
+            "description":"about grocery 3",
+            "price": 25,
+            "category":"fastFood",
+            "image":"https://5.imimg.com/data5/QB/DG/MY-24753572/packed-basmati-rice-500x500.jpg",
+            "size":"1kg"   
+        },
+        {
+            "_id": "grocery4",
+            "title": "Grocery 4",
+            "description":"about grocery 4",
+            "price": 10,
+            "category":"fastFood",
+            "image":"https://5.imimg.com/data5/QB/DG/MY-24753572/packed-basmati-rice-500x500.jpg",
+            "size":"250g"   
+        },
+        {
+            "_id": "grocery5",
+            "title": "Grocery 5",
+            "description":"about dress 5",
+            "price": 30,
+            "category":"dailyUse",
+            "image":"https://5.imimg.com/data5/QB/DG/MY-24753572/packed-basmati-rice-500x500.jpg",
+            "size":"500g"   
+        },
+        {
+            "_id": "grocery6",
+            "title": "Grocery 6",
+            "description":"about grocery 6",
+            "price": 15,
+            "category":"bestSeller",
+            "image":"https://5.imimg.com/data5/QB/DG/MY-24753572/packed-basmati-rice-500x500.jpg",
+            "size":"250g"   
+        },
+        {
+            "_id": "grocery7",
+            "title": "Grocery 7",
+            "description":"about grocery 7",
+            "price": 25,
+            "category":"fastFood",
+            "image":"https://5.imimg.com/data5/QB/DG/MY-24753572/packed-basmati-rice-500x500.jpg",
+            "size":"1kg"   
+        },
+        {
+            "_id": "grocery4",
+            "title": "Grocery 8",
+            "description":"about grocery 8",
+            "price": 10,
+            "category":"fastFood",
+            "image":"https://5.imimg.com/data5/QB/DG/MY-24753572/packed-basmati-rice-500x500.jpg",
+            "size":"250g"   
+        },
+        {
+            "_id": "grocery9",
+            "title": "Grocery 9",
+            "description":"about dress 9",
+            "price": 30,
+            "category":"dailyUse",
+            "image":"https://5.imimg.com/data5/QB/DG/MY-24753572/packed-basmati-rice-500x500.jpg",
+            "size":"500g"   
+        }
+        ,
+        {
+            "_id": "grocery10",
+            "title": "Grocery 10",
+            "description":"about dress 10",
+            "price": 50,
+            "category":"fastFood",
+            "image":"https://5.imimg.com/data5/QB/DG/MY-24753572/packed-basmati-rice-500x500.jpg",
+            "size":"500g"   
+        }
+    ]
+}

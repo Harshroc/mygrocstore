@@ -1,0 +1,31 @@
+{
+    "categories": [
+        {
+            "_id": "bestSeller",
+            "title": "Best Seller",
+            "description":"about Category 1",
+            "image":"https://5.imimg.com/data5/QB/DG/MY-24753572/packed-basmati-rice-500x500.jpg"
+        },
+        {
+            "_id": "fastFood",
+            "title": "Fast Food",
+            "description":"about Category 2",
+            "category":"fastFood",
+            "image":"https://5.imimg.com/data5/QB/DG/MY-24753572/packed-basmati-rice-500x500.jpg"
+        },
+        {
+            "_id": "dailyUse",
+            "title": "Daily Use",
+            "description":"about Category 3",            
+            "category":"fastFood",
+            "image":"https://5.imimg.com/data5/QB/DG/MY-24753572/packed-basmati-rice-500x500.jpg"
+        },
+        {
+            "_id": "moreProducts",
+            "title": "moreProducts",
+            "description":"about Category 4",            
+            "category":"fastFood",
+            "image":"https://5.imimg.com/data5/QB/DG/MY-24753572/packed-basmati-rice-500x500.jpg"
+        }
+    ]
+}
