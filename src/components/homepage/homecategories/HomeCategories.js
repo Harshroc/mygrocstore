@@ -5,6 +5,7 @@ import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import '../../../assests/css/style.css';
 import { makeStyles } from '@mui/styles';
+import { useSelector } from 'react-redux';
 
 const useStyles = makeStyles(() => ({
      carouselarrow: {
@@ -31,6 +32,12 @@ const HomeCategories = ({products}) => {
 
     const handleDragStart = (e) => e.preventDefault();
 
+    const cartItems = useSelector((state) => state.cart.cartItems );
+
+    function inCart(item) {
+       return item._id === this        
+      }
+
     const responsive = {
         0: { item: 1},
         568: { items: 2 },
@@ -46,7 +53,12 @@ const HomeCategories = ({products}) => {
 
     
     let bestSelleritems = bestSeller.map((image) => {
-        return <div data-value={image._id}><Product product ={image}/></div>
+        return <div data-value={image._id}>
+            {
+                // <Product product ={image}/>
+                cartItems.find(inCart, image._id) === undefined ? <Product product={image} inCart={0}/> : <Product product={image} inCart={1} />
+            }
+            </div>
         }); 
 
     let bestSelleritemss;
@@ -63,7 +75,9 @@ const HomeCategories = ({products}) => {
 
     let staplesitems = staples.map((staple) => {
     
-        return <div data-value={staple._id}><Product product={staple}/></div>
+        return <div data-value={staple._id}>
+            {cartItems.find(inCart, staple._id) === undefined ? <Product product={staple} inCart={0}/> : <Product product={staple} inCart={1} />}
+            </div>
         }); 
 
         
@@ -81,7 +95,9 @@ const HomeCategories = ({products}) => {
 
 
     let snacksAndBeveragesitem = snacksAndBeverages.map((image) => {
-        return <div data-value={image._id}><Product product={image}/></div>
+        return <div data-value={image._id}>
+            {cartItems.find(inCart, image._id) === undefined ? <Product product={image} inCart={0}/> : <Product product={image} inCart={1} />}
+            </div>
         }); 
 
     let snacksAndBeveragesitems

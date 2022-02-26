@@ -12,7 +12,6 @@ const ProductsList = ({products}) => {
     function inCart(item) {
        return item._id === this        
       }
-      
     
     return (
             <Grid container>
