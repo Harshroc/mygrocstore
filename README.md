@@ -33,6 +33,31 @@ Live demo [_here_](https://goofy-swartz-a9d77f.netlify.app/)
 
 ## Setup
 
+UP AND RUNNING
+Install dependencies:
+
+If you use yarn:
+
+$ yarn
+Else if you use npm:
+
+$ npm install
+Start the development server
+$ yarn start
+or
+
+$ npm start
+Testing
+$ yarn test
+Or
+
+$ npm test
+Production Build
+$ yarn build
+or
+
+$ npm run build
+
 Project frontend is built in React and bootstrapped using [Create React App](https://github.com/facebook/create-react-app).\
 Project backend is built in NodeJS (Express JS) + Mongo. [Backend Code](https://github.com/Harshroc/adminmygrocstore/)
 
