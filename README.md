@@ -1,10 +1,12 @@
-# MyGgrocStore
+# MyGrocStore
 
 ## Introduction
 
 "MyGrocStore" is a online grocery e-commerce store that provide buying of daily groceries at the ease and comfort of home. 
 
 Live demo [_here_](https://goofy-swartz-a9d77f.netlify.app/)
+
+Backend Code [_here_](https://github.com/Harshroc/adminmygrocstore/)
 
 ## Features
 
@@ -20,13 +22,13 @@ Live demo [_here_](https://goofy-swartz-a9d77f.netlify.app/)
 
 ## Technologies used to build this project
 
-![React JS](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)\
+![React JS](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 
 ![Redux](https://img.shields.io/badge/-Redux-red?style=for-the-badge&logo=appveyor)
 
 ## Other Libraries/Platforms Used
 
-![Material UI](https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white)\
+![Material UI](https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white)
 
 ![Netlify](https://img.shields.io/badge/-Netlify%20-blue?style=for-the-badge&logo=appveyor)
 
