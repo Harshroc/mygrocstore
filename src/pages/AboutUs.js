@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { Grid } from '@mui/material';
 import Navbar from '../components/navbar/Navbar';
 import { makeStyles } from '@mui/styles';
@@ -16,7 +16,7 @@ function AboutUs() {
   const classes = useStyles();
 
   return (
-    
+    <>
     <Grid container >
       <Grid container direction="column" className={classes.homecontainer}>
         <Grid item>
@@ -48,7 +48,7 @@ Calendar conveyance according to your benefit.</p>
       
       </Grid>
     
-    
+      </>
   );
 }
 
