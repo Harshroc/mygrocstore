@@ -6,8 +6,6 @@
 
 Live demo [_here_](https://goofy-swartz-a9d77f.netlify.app/)
 
-Backend Code [_here_](https://github.com/Harshroc/adminmygrocstore/)
-
 ## Features
 
 - Sign up/Sign In - user registration and authentication
@@ -36,7 +34,7 @@ Backend Code [_here_](https://github.com/Harshroc/adminmygrocstore/)
 ## Setup
 
 Project frontend is built in React and bootstrapped using [Create React App](https://github.com/facebook/create-react-app).\
-Project backend is built in NodeJS (Express JS) + Mongo.
+Project backend is built in NodeJS (Express JS) + Mongo. [Backend Code](https://github.com/Harshroc/adminmygrocstore/)
 
 Project uses commitizen for commit rules and guidelines
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
