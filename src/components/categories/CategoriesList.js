@@ -1,3 +1,4 @@
+import React from 'react';
 import { useSelector } from 'react-redux';
 import { Grid } from '@mui/material';
 import Card from '@mui/material/Card';
@@ -13,6 +14,7 @@ const CategoriesList = () => {
     const categories = useSelector(state => state.categories.items);
  
     return (
+      <>
         <Grid container>
             <Grid container item pt={2} pb={2} pl={2} pr={2} xs={12} md={12}>
             <Grid container>
@@ -53,6 +55,7 @@ const CategoriesList = () => {
                 </Grid>
             </Grid>
         </Grid>
+        </>
     )
 }
 

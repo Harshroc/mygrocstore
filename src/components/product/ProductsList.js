@@ -1,3 +1,4 @@
+import React from 'react';
 import { Grid } from '@mui/material';
 import { useSelector } from 'react-redux';
 
@@ -14,6 +15,7 @@ const ProductsList = ({products}) => {
       }
     
     return (
+        <>
             <Grid container>
                 
                 
@@ -30,7 +32,8 @@ const ProductsList = ({products}) => {
                     ))
                     
                 }
-            </Grid>            
+            </Grid> 
+            </>           
             )
 };
 

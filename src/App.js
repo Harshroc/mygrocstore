@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { ThemeProvider } from '@mui/material';
 import { theme } from '../src/utils/theme';
 import Home from './pages/Home';
