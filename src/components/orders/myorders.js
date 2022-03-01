@@ -53,11 +53,11 @@ const Myorders = () => {
                         </thead>
                         <tbody>
                             
-                           {!myorderdata ? <tr><td colSpan={5}>Loading</td></tr> : myorderdata.map(element => (
+                           {!myorderdata ? <tr key={"element"}><td colSpan={5}>Loading</td></tr> : myorderdata.map(element => (
                                 <tr key={element._id}>
                                     <td>{element.userOrderId}</td>
-                                    <td>{element.orderProducts.map(data => (
-                                        <span>{data.title}X{data.count}<br/></span>
+                                    <td>{element.orderProducts.map((data,i) => (
+                                        <span key={i}>{data.title}X{data.count}<br/></span>
                                     ))}</td>
                                     <td>{element.createdAt.slice(0,10)}</td>
                                     <td>Rs. {element.orderAmount} /-</td>
