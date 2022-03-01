@@ -268,83 +268,115 @@ export default function PrimarySearchAppBar() {
   const renderMobileMenu = (
     
       
+    userInfo ? <Menu
+    anchorEl={mobileMoreAnchorEl}
+    anchorOrigin={{
+      vertical: 'top',
+      horizontal: 'right',
+    }}
+    id={mobileMenuId}
+    keepMounted
+    transformOrigin={{
+      vertical: 'top',
+      horizontal: 'right',
+    }}
+    open={isMobileMenuOpen}
+    onClose={handleMobileMenuClose}
+  >
     
-    <Menu
-      anchorEl={mobileMoreAnchorEl}
-      anchorOrigin={{
-        vertical: 'top',
-        horizontal: 'right',
-      }}
-      id={mobileMenuId}
-      keepMounted
-      transformOrigin={{
-        vertical: 'top',
-        horizontal: 'right',
-      }}
-      open={isMobileMenuOpen}
-      onClose={handleMobileMenuClose}
-    >
-      
 
-      
-      
-      
-      
-      {/* <MenuItem onClick={handleProfileMenuOpen}>
-        <IconButton
-          size="large"
-          aria-label="account of current user"
-          aria-controls="primary-search-account-menu"
-          aria-haspopup="true"
-          color="inherit"
-        >
+    
+    
+    
+    
+    {/* <MenuItem onClick={handleProfileMenuOpen}>
+      <IconButton
+        size="large"
+        aria-label="account of current user"
+        aria-controls="primary-search-account-menu"
+        aria-haspopup="true"
+        color="inherit"
+      >
+        <PersonIcon />
+      </IconButton>
+      <span>My Account</span>
+    </MenuItem> */}
+    {/* <Link className={classes.links1} to="/myorders">
+    <MenuItem>
+
+      <IconButton
+        size="large"
+        color="inherit"
+      >
+       
+          <BorderColorIcon />
+       
+      </IconButton>
+      <span >My Orders</span>
+    </MenuItem>
+    </Link> */}
+    <Link className={classes.links1} to="/changepassword">
+    <MenuItem>
+
+      <IconButton
+        size="large"
+        color="inherit"
+      >
+       
           <PersonIcon />
-        </IconButton>
-        <span>My Account</span>
-      </MenuItem> */}
-      <Link className={classes.links1} to="/myorders">
-      <MenuItem>
+       
+      </IconButton>
+      <span >Change Password</span>
+    </MenuItem>
+    </Link>
+    <Link className={classes.links1} to="/logout">
+    <MenuItem>
 
-        <IconButton
-          size="large"
-          color="inherit"
-        >
-         
-            <BorderColorIcon />
-         
-        </IconButton>
-        <span >My Orders</span>
-      </MenuItem>
-      </Link>
-      <Link className={classes.links1} to="/changepassword">
-      <MenuItem>
+      <IconButton
+        size="large"
+        color="inherit"
+      >
+       
+          <ExitToAppIcon />
+       
+      </IconButton>
+      <span >Logout</span>
+    </MenuItem>
+    </Link>
+  </Menu> : <Menu
+    anchorEl={mobileMoreAnchorEl}
+    anchorOrigin={{
+      vertical: 'top',
+      horizontal: 'right',
+    }}
+    id={mobileMenuId}
+    keepMounted
+    transformOrigin={{
+      vertical: 'top',
+      horizontal: 'right',
+    }}
+    open={isMobileMenuOpen}
+    onClose={handleMobileMenuClose}
+  >
+    
+    
+   
+    <Link className={classes.links1} to="/signin">
+    <MenuItem>
 
-        <IconButton
-          size="large"
-          color="inherit"
-        >
-         
-            <PersonIcon />
-         
-        </IconButton>
-        <span >Change Password</span>
-      </MenuItem>
-      </Link>
-      <Link className={classes.links1} to="/logout">
-      <MenuItem>
-
-        <IconButton
-          size="large"
-          color="inherit"
-        >
-         
-            <ExitToAppIcon />
-         
-        </IconButton>
-        <span >Logout</span>
-      </MenuItem>
-      </Link>
-    </Menu>
+      <IconButton
+        size="large"
+        color="inherit"
+      >
+       
+       <LoginOutlinedIcon />
+       
+      </IconButton>
+      <span >Sign In</span>
+    </MenuItem>
+    </Link>
+  </Menu>
+    
     
   );
 
@@ -488,7 +520,7 @@ export default function PrimarySearchAppBar() {
            
           </Box>
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-          
+          <Link style={{paddingTop:"6px"}} className={classes.links} to="/orders">
           <IconButton
               size="small"
               aria-label=""
@@ -499,20 +531,26 @@ export default function PrimarySearchAppBar() {
               </Badge>
               
             </IconButton>
+            </Link>
             &nbsp;&nbsp; 
-            <IconButton
-              size="small"
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <AccountCircle />
-              
-            </IconButton>
-            &nbsp;&nbsp;
+            {
+              userInfo && <Link style={{paddingTop:"6px"}} className={classes.links} to="/myorders">
+              <IconButton
+                size="small"
+                edge="end"
+                aria-label="account of current user"
+                aria-controls={menuId}
+                aria-haspopup="true"
+                onClick={handleProfileMenuOpen}
+                color="inherit"
+              >
+                <AccountCircle />
+                
+              </IconButton>
+              </Link>
+                
+            }
+            
             <IconButton
               size="large"
               aria-label="show more"
