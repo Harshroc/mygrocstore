@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { Grid } from '@mui/material';
 import { useSelector } from 'react-redux';
 import Navbar from '../components/navbar/Navbar';

@@ -216,16 +216,16 @@ const LinaerStepper = () => {
   const [activeStep, setActiveStep] = useState(0);
   const steps = getSteps();
   const dispatcher = useDispatch();
-  const userDetails = useSelector((state) => state.billing?.userdetails);
+  const userDetails = useSelector((state) => state.billing ? state.billing.userdetails : {});
 
   const methods = useForm({
       defaultValues: {
-        addressType: userDetails?.addressType,
-        address: userDetails?.address,
-        addressCity:userDetails?.addressCity,
-        addressPincode: userDetails?.addressPincode,
-        deliveryTime: userDetails?.deliveryTime,
-        phoneNo:userDetails?.phoneNo,
+        addressType: userDetails ? userDetails.addressType : "",
+        address: userDetails ? userDetails.address : "",
+        addressCity:userDetails ? userDetails.addressCity : "",
+        addressPincode: userDetails ? userDetails.addressPincode : "",
+        deliveryTime: userDetails ? userDetails.deliveryTime : "",
+        phoneNo:userDetails ? userDetails.phoneNo : "",
         payment:"Cash On Delivery",
       }
   });
@@ -239,7 +239,7 @@ const LinaerStepper = () => {
   };
 
   const handleNext = (data) => {
-    if(data.phoneNo < 0 ||  data.phoneNo?.length < 10)
+    if(data.phoneNo < 0 ||  data.phoneNo.length < 10)
     {
       alert("Please enter correct contact number");
       return false;
