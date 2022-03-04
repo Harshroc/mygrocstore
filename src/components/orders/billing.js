@@ -239,7 +239,8 @@ const LinaerStepper = () => {
   };
 
   const handleNext = (data) => {
-    if(data.phoneNo < 0 ||  data.phoneNo.length < 10)
+    
+    if((data.phoneNo !== "") && (data.phoneNo < 0 || data.phoneNo.length < 10))
     {
       alert("Please enter correct contact number");
       return false;
