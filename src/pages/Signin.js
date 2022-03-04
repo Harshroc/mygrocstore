@@ -31,8 +31,8 @@ const Signin = () => {
     const classes = useStyles();
     const navigate = useNavigate();
     const dispatcher = useDispatch();
-    const [email, setemail] = useState('');
-    const [password, setpassword] = useState('')
+    const [email, setemail] = useState('misraharshvardhan@gmail.com');
+    const [password, setpassword] = useState('admin@123')
     const userInfoState = useSelector((state) => state.userInfo);
     const { loading, userInfo, error} = userInfoState;
     toast.configure();
@@ -96,7 +96,8 @@ const Signin = () => {
             label="Email Address"
             name="email"
             autoComplete="email"
-            autoFocus
+            defaultValue="misraharshvardhan@gmail.com"
+            autoFocus            
             onChange={(e) => setemail(e.target.value)}
           />
           <TextField
@@ -107,6 +108,7 @@ const Signin = () => {
             label="Password"
             type="password"
             id="password"
+            defaultValue="admin@123"
             autoComplete="current-password"
             onChange={(e) => setpassword(e.target.value)}
           />
