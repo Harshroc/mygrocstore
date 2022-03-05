@@ -4,7 +4,7 @@
     <img src="https://i.ibb.co/mSr52xg/Screenshot-2022-03-05-at-5-58-36-PM.png" border="0" alt="Logo" width="400" height="200" >
 </p>
 
-## Introduction
+# Introduction
 
 "MyGrocStore" is a online grocery e-commerce store that provide buying of daily groceries at the ease and comfort of home. 
 
