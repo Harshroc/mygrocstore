@@ -11,7 +11,7 @@
 # Table of Contents
 
 1. [Demo](#demo)
-2. [Demo](#features)
+2. [Features](#features)
 3. [Installation](#Setup)
 4. [Technology Stack](#technology-stack)
 5. [Authors](#authors)
