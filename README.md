@@ -1,7 +1,7 @@
 # MyGrocStore
 
 <p align="center">
-    <img src="https://drive.google.com/file/d/1UYeVq0GWvAqu0A5I5vJyRROTAF12jlO4/view" alt="Logo" width="400" height="200" >
+    <img src="https://i.ibb.co/mSr52xg/Screenshot-2022-03-05-at-5-58-36-PM.png" border="0" alt="Logo" width="400" height="200" >
 </p>
 
 ## Introduction
