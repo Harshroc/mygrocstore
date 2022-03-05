@@ -12,7 +12,7 @@
 
 1. [Demo](#demo)
 2. [Features](#features)
-3. [Installation](#Setup)
+3. [Installation](#Installation)
 4. [Technology Stack](#technology-stack)
 5. [Authors](#authors)
 6. [License](#license)
@@ -32,7 +32,7 @@
 - Logout - logout of the account
 - Change Password - user can change the password if requires.
 
-# Setup
+# Installation
 
 UP AND RUNNING
 Install dependencies:
