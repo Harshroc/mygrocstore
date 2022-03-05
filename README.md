@@ -1,5 +1,9 @@
 # MyGrocStore
 
+<p align="center">
+    <img src="https://drive.google.com/file/d/1UYeVq0GWvAqu0A5I5vJyRROTAF12jlO4/view" alt="Logo" width="400" height="200" >
+</p>
+
 ## Introduction
 
 "MyGrocStore" is a online grocery e-commerce store that provide buying of daily groceries at the ease and comfort of home. 
